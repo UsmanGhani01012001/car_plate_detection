@@ -7,6 +7,9 @@ import cv2
 import tempfile
 from ultralytics import YOLO
 
+st.cache_data.clear()
+st.cache_resource.clear()
+
 # === Page config must come first ===
 st.set_page_config(page_title="Car Number Plate Detection", layout="centered")
 
