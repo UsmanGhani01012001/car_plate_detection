@@ -27,7 +27,7 @@ import tempfile
 #     return YOLO(MODEL_PATH)
 
 # === Load model ===
-model = load_model()
+# model = load_model()
 
 # === Streamlit UI ===
 st.title("🚗 Car Number Plate Detection")
