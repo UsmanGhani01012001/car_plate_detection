@@ -1,4 +1,0 @@
-[server]
-maxUploadSize = 10
-runOnSave = false
-fileWatcherType = "none"
