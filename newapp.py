@@ -7,24 +7,24 @@ import numpy as np
 import tempfile
 # from ultralytics import YOLO
 
-st.cache_data.clear()
-st.cache_resource.clear()
+# st.cache_data.clear()
+# st.cache_resource.clear()
 
-# === Page config must come first ===
-st.set_page_config(page_title="Car Number Plate Detection", layout="centered")
+# # === Page config must come first ===
+# st.set_page_config(page_title="Car Number Plate Detection", layout="centered")
 
-# === Download model from Google Drive ===
-MODEL_URL = "https://drive.google.com/uc?export=download&id=1h_zsRpy2HSgXQMd-NoT8cYYmvYQtKHP2"
-MODEL_PATH = "yolov8_car_plate.pt"
+# # === Download model from Google Drive ===
+# MODEL_URL = "https://drive.google.com/uc?export=download&id=1h_zsRpy2HSgXQMd-NoT8cYYmvYQtKHP2"
+# MODEL_PATH = "yolov8_car_plate.pt"
 
-@st.cache_resource
-def load_model():
-    if not os.path.exists(MODEL_PATH):
-        with st.spinner("Downloading model..."):
-            response = requests.get(MODEL_URL)
-            with open(MODEL_PATH, "wb") as f:
-                f.write(response.content)
-    return YOLO(MODEL_PATH)
+# @st.cache_resource
+# def load_model():
+#     if not os.path.exists(MODEL_PATH):
+#         with st.spinner("Downloading model..."):
+#             response = requests.get(MODEL_URL)
+#             with open(MODEL_PATH, "wb") as f:
+#                 f.write(response.content)
+#     return YOLO(MODEL_PATH)
 
 # === Load model ===
 model = load_model()
